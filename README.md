@@ -6,3 +6,8 @@ This is an app using React Native to display all kinds of goodie information and
 
 #### Version 0.1.0 
 Using CRNA
+
+#### Components and Tools Used
+
+### NPM
+[donenv](https://www.npmjs.com/package/react-native-dotenv) for hiding values from prying eyes
