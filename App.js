@@ -4,9 +4,24 @@ import { StyleSheet,
          View,
          Component,
          Image,
-         ImageBackground } from 'react-native';
+         ImageBackground,
+         TouchableHighlight,
+          } from 'react-native';
 // import { ANOTHER_CONFIG } from 'react-native-dotenv'
 export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { pressing: false };
+  }
+
+   _onPressIn = () => {
+    this.setState({ pressing: true });
+  };
+
+  _onPressOut = () => {
+    this.setState({ pressing: false });
+  };
+
   render() {
     return (
       <View style={styles.container}>
@@ -16,6 +31,18 @@ export default class App extends React.Component {
                      height: '100%'}}>
 
             <Text style={styles.title}> Star Wars Info</Text>
+
+            <TouchableHighlight
+              style={styles.touchable}
+              onPressIn={this._onPressIn}
+              onPressOut={this._onPressOut}
+            >
+                <View>
+                    <Text style={styles.title}>
+                       {this.state.pressing ? "EEK!" : "PUSH ME"}
+                    </Text>
+                </View>
+            </TouchableHighlight>
 
         </ImageBackground>
       </View>
@@ -41,5 +68,13 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: baseFontSize +10,
     paddingTop: 100
+  },
+   touchable: { borderRadius: 100 },
+  button: {
+    backgroundColor: "#FF0000",
+    borderRadius: 100,
+    height: 200,
+    width: 200,
+    justifyContent: "center"
   }
 });

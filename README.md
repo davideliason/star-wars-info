@@ -13,8 +13,8 @@ Using CRNA
 [donenv](https://www.npmjs.com/package/react-native-dotenv) for hiding values from prying eyes
 
 #### Components
-<Text>
-<Image>
-<ImageBackground>
-<View>
-<Stylesheet>
+Text
+Image
+ImageBackground
+View
+Stylesheet
