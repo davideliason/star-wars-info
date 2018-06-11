@@ -7,6 +7,7 @@ import { StyleSheet,
          ImageBackground,
          TouchableHighlight,
           } from 'react-native';
+import Button from './components/Button.js'
 // import { ANOTHER_CONFIG } from 'react-native-dotenv'
 export default class App extends React.Component {
   constructor(props) {
@@ -32,17 +33,7 @@ export default class App extends React.Component {
 
             <Text style={styles.title}> Star Wars Info</Text>
 
-            <TouchableHighlight
-              style={styles.touchable}
-              onPressIn={this._onPressIn}
-              onPressOut={this._onPressOut}
-            >
-                <View>
-                    <Text style={styles.title}>
-                       {this.state.pressing ? "EEK!" : "PUSH ME"}
-                    </Text>
-                </View>
-            </TouchableHighlight>
+            <Button />
 
         </ImageBackground>
       </View>
@@ -50,12 +41,12 @@ export default class App extends React.Component {
   }
 }
 
-
 const baseFontSize = 16;
 
 const styles = StyleSheet.create({
    container: { 
     flex: 1,
+    justifyContent: "center",
     alignItems: "center",
     paddingTop: 23 
   },
@@ -69,12 +60,7 @@ const styles = StyleSheet.create({
     fontSize: baseFontSize +10,
     paddingTop: 100
   },
-   touchable: { borderRadius: 100 },
-  button: {
-    backgroundColor: "#FF0000",
-    borderRadius: 100,
-    height: 200,
-    width: 200,
-    justifyContent: "center"
-  }
+  welcome: { fontSize: 20, textAlign: "center", margin: 10, color: "#FFFFFF" },
 });
+
+
