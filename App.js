@@ -12,15 +12,18 @@ export default class App extends React.Component {
       <View style={styles.container}>
         <ImageBackground
              source={require('./images/star_wars.jpeg')}
-             style={{width: '100%', height: '100%'}}>
+             style={{width: '100%',
+                     height: '100%'}}>
 
-          <Text style={styles.title}> Star Wars Info</Text>
+            <Text style={styles.title}> Star Wars Info</Text>
 
         </ImageBackground>
       </View>
     );
   }
 }
+
+const baseFontSize = 16;
 
 const styles = StyleSheet.create({
    container: { 
@@ -34,6 +37,7 @@ const styles = StyleSheet.create({
   },
   title: {
     color: 'yellow',
-    textAlign: "center"
+    textAlign: "center",
+    fontSize: baseFontSize +10
   }
 });
