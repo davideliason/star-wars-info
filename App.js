@@ -23,6 +23,7 @@ export default class App extends React.Component {
   }
 }
 
+
 const baseFontSize = 16;
 
 const styles = StyleSheet.create({
@@ -38,6 +39,7 @@ const styles = StyleSheet.create({
   title: {
     color: 'yellow',
     textAlign: "center",
-    fontSize: baseFontSize +10
+    fontSize: baseFontSize +10,
+    paddingTop: 100
   }
 });
