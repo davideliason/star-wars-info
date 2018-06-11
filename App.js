@@ -10,18 +10,6 @@ import { StyleSheet,
 import Button from './components/Button.js'
 // import { ANOTHER_CONFIG } from 'react-native-dotenv'
 export default class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { pressing: false };
-  }
-
-   _onPressIn = () => {
-    this.setState({ pressing: true });
-  };
-
-  _onPressOut = () => {
-    this.setState({ pressing: false });
-  };
 
   render() {
     return (
